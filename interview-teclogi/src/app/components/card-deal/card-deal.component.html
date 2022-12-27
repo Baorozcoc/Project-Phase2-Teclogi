@@ -1,0 +1,26 @@
+<mat-card class="d-flex align-items-center mt-4 p-4 shadow">
+    <img [highlight]="deal.savings/100" alt="rating"/>
+    <mat-card-header class="mb-3">
+        <mat-card-title class="text-center fw-bold">
+            Precio al por mayor: {{deal.price | currency}}
+        </mat-card-title>
+        <mat-card-subtitle class="text-center">
+            Precio retail: {{deal.retailPrice | currency}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="mb-3 text-center">
+        Con este trato consigues un ahorro del 
+        <strong>
+             {{deal.savings/100| percent}}
+        </strong>
+    </mat-card-content>
+    <mat-card-actions class="w-75">
+        <button 
+            type="button" 
+            mat-flat-button
+            class="text-white w-100 hoveraccentbtn"
+            color="accent"
+            >Ir a la tienda
+        </button>
+    </mat-card-actions>
+</mat-card>

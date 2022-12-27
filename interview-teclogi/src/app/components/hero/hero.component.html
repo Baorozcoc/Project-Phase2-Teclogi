@@ -1,0 +1,21 @@
+<mat-card 
+    class="p-3 d-inline-flex flex-column flex-sm-row justify-content-around align-items-center"
+    color="primary"
+    ><img 
+        mat-card-xl-image
+        [src]="info.thumb" 
+        alt="Thumb of the Videogame"
+        class="ratio ratio-4x3"
+    />
+    <mat-card-header class="ms-0 me-0 ms-sm-5 me-sm-5">
+        <mat-card-title class="text-center h1">
+            {{info.title}}
+        </mat-card-title>
+        <mat-card-title class="text-center">
+            Menor precio conseguido: {{cheapestPriceEver.price | currency}}
+        </mat-card-title>
+        <mat-card-subtitle class="text-center">
+            Fecha: {{cheapestPriceEver.date| date:'short' }}
+        </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

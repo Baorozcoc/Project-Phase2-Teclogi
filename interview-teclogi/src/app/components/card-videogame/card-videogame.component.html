@@ -1,0 +1,22 @@
+<mat-card class="d-flex align-items-center mt-4 p-4 shadow">
+    <img 
+        mat-card-lg-image 
+        [src]="videogame.thumb" 
+        alt="Thumb of the Videogame"
+        class="w-100 mb-4"
+     />
+    <mat-card-title class="mb-3 fw-bold">
+        {{videogame.external}}
+    </mat-card-title>
+    <mat-card-actions class="w-75">
+       <button 
+            type="button" 
+            mat-flat-button
+            (click)="sendVideogame(videogame.gameID)"
+            class="text-white w-100 hoveraccentbtn"
+            routerLink="/videogame" 
+            color="accent"
+            >Ver detalles
+        </button> 
+    </mat-card-actions>
+</mat-card>

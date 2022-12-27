@@ -1,0 +1,12 @@
+.hoveraccentbtn{
+    transition: background-color 0.3s ease-out;
+    &:hover{
+        background-color: #FFC42E;
+    }
+}
+img{
+    position: absolute;
+    right:5%;
+    width: 30px;
+    height: auto;
+}

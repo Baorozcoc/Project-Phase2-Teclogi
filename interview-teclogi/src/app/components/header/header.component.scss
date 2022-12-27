@@ -1,0 +1,36 @@
+header{
+    z-index: 1;
+}
+#PacmanBtn{
+    position: relative;
+    width: 15%;
+    min-width: 100px;
+    padding: 10px;
+    height: 135px;
+    border-radius: 0 0 15px 15px;
+    z-index: 2;
+    transition: height 0.3s ease-out;
+    transition: font-size 0.15s ease-out;
+    img{
+        max-height: 8em;
+        height: auto;
+        width: auto;
+    }
+}
+
+.inputnavbardesktop{
+    max-width: 500px;
+    min-width: 230px;
+    margin-left: 5px;
+    position: relative;
+    top: 4px;
+    @media screen and (max-width: 598px) {
+        top: 0;
+      }
+}
+.inputnavbarmobile{
+    position: relative;
+    right: 0;
+    top:20px;
+    max-width: 220px;
+}

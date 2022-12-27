@@ -1,0 +1,139 @@
+<header class="w-100">
+    <mat-toolbar class="shadow">
+        <mat-toolbar-row class="justify-content-between">
+            <button
+                type="button" 
+                mat-flat-button
+                [scrollbtn]="reduceButton"
+                class="align-self-start"
+                id="PacmanBtn"
+                routerLink="/"
+                color="primary"
+                ><img 
+                    mat-card-lg-image 
+                    src="../../../assets/pngwing-pacman.png" 
+                    alt="Thumb of Pacman"
+                    class="w-100 mt-1"
+                />
+            </button>
+            <!--Desktop Design-->
+            <mat-form-field 
+                appearance="outline" 
+                class="align-self-start w-50 d-none d-sm-inline inputnavbardesktop"
+                color="primary"
+                ><button 
+                    type="button" 
+                    mat-icon-button 
+                    matPrefix 
+                    (click)="sendTitle()"
+                    ><mat-icon color="primary">
+                        search
+                    </mat-icon>
+                </button>
+                <input 
+                    type="text"
+                    matInput 
+                    [(ngModel)]="title" 
+                    (change)="sendTitle()" 
+                    placeholder="¿Qué estás buscando?"
+                    >
+            </mat-form-field>
+            <button 
+                type="button"
+                mat-button 
+                class="d-none d-lg-inline" 
+                color="primary" 
+                ><span>
+                    Resumen de compras
+                </span>
+                <span 
+                    matBadge="0" 
+                    matBadgeOverlap="true" 
+                    matBadgePosition="below after" 
+                    color="accent"
+                    ><mat-icon>
+                        add_shopping_cart
+                    </mat-icon>
+                </span>
+            </button>
+            <button 
+                type="button"
+                mat-button 
+                class="d-none d-lg-inline" 
+                color="primary" 
+                ><span>
+                    <mat-icon class="pt-1 fs-4">
+                        account_circle
+                    </mat-icon> 
+                </span>
+                Eduardo
+                <span>
+                    <mat-icon class="fs-2">
+                        arrow_drop_down
+                    </mat-icon>
+                </span>
+            </button>
+            <!--Mobile Design-->
+            <span>
+                <button 
+                    type="button" 
+                    mat-icon-button
+                    class="d-inline d-sm-none" 
+                    (click)="deployInput=!deployInput"
+                    color="primary"  
+                    ><mat-icon>
+                        search
+                    </mat-icon>
+                </button>
+                <button 
+                    type="button" 
+                    mat-icon-button 
+                    class="d-inline d-lg-none"
+                    color="primary" 
+                    ><mat-icon 
+                        matBadge="0" 
+                        matBadgeOverlap="true" 
+                        matBadgePosition="below after" 
+                        matBadgeSize="small"
+                        color="primary" 
+                        >add_shopping_cart
+                    </mat-icon>
+                </button>
+
+                <button 
+                    type="button" 
+                    mat-icon-button 
+                    class="d-inline d-lg-none"
+                    color="primary" 
+                    ><mat-icon>
+                        account_circle
+                    </mat-icon>
+                </button>
+            </span>
+        </mat-toolbar-row>
+        <mat-toolbar-row 
+            class="position-sticky justify-content-end d-sm-none " 
+            *ngIf="deployInput"
+            ><mat-form-field 
+                appearance="outline" 
+                class="align-self-end w-75 inputnavbarmobile"
+                color="primary" 
+                ><button 
+                    type="button" 
+                    mat-icon-button 
+                    matPrefix 
+                    (click)="sendTitle()"
+                    ><mat-icon color="primary">
+                        search
+                    </mat-icon>
+                </button>
+                <input 
+                    type="text" 
+                    matInput 
+                    [(ngModel)]="title" 
+                    (change)="sendTitle()" 
+                    placeholder="¿Qué estás buscando?">
+            </mat-form-field>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>

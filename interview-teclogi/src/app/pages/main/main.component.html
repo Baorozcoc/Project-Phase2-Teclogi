@@ -1,0 +1,33 @@
+<main 
+    (scroll)="mainScrolling($event)"
+    class="d-grid ps-1 pe-1 ps-md-5 pe-md-5 w-100 overflow-scroll  pageformat" 
+    ><h3 
+        *ngIf="title!=''&&videogames.length!=0" 
+        >Todos los Juegos
+    </h3>
+    <section 
+        *ngIf="title!=''&&videogames.length!=0" 
+        class="row row-cols-4 justify-content-center ps-0 pe-0 ps-md-5 pe-md-5 w-100"
+        ><app-card-videogame 
+            *ngFor="let videogame of videogames" 
+            [videogame]="videogame"
+            class="col-12 col-sm-6 col-lg-4 col-xl-3"
+        ></app-card-videogame>
+    </section>
+    <h5 
+        *ngIf="title===''" 
+        class="text-center"
+        >Por favor busca un videojuego en la barra superior para empezar
+        <mat-icon color="warn">
+            announcement
+        </mat-icon>
+    </h5>
+    <h5 
+        *ngIf="title!=''&&videogames.length===0" 
+        class="text-center"
+        >No se encontró ningun videojuego asociado a tu término de busqueda
+        <mat-icon color="warn">
+            announcement
+        </mat-icon>
+    </h5>
+</main>
